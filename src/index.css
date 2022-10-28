@@ -133,3 +133,8 @@ button:hover {
   width: 70px;
   height: 30px;
 }
+
+.single-user {
+  text-align: center;
+  margin-top: 100px;
+}

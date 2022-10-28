@@ -21,7 +21,7 @@ const SingleUser = () => {
   }, [users]);
 
   return (
-    <section>
+    <section className='single-user'>
       {users.length === 0 && <div>Loading...</div>}
       {currentUser.length > 0 &&
         currentUser.map((user) => (
@@ -30,10 +30,9 @@ const SingleUser = () => {
               <img src={user.picture.large} alt="user profile" />
             </div>
 
-            <h2>{user.name.last}</h2>
-            <h3>{user.email}</h3>
-            <h4>1999-02-2-12</h4>
-            <h5>Address</h5>
+            <h2>Name: {user.name.first}  {user.name.last}</h2>
+            <h3>Email: {user.email}</h3>
+            <h4>Username: {user.login.username}</h4>
           </div>
         ))}
     </section>
